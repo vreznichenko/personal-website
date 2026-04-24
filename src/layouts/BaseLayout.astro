@@ -1,5 +1,8 @@
 ---
-const { title = "Volod" } = Astro.props;
+const {
+  title = "Volod Reznichenko — Volodymyr Reznichenko",
+  description = "Product leader in experimentation and digital media. Former founder.",
+} = Astro.props;
 ---
 <!doctype html>
 <html lang="en">
@@ -7,6 +10,9 @@ const { title = "Volod" } = Astro.props;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
 
 <style>
   :root {
@@ -421,6 +427,16 @@ nav a.active {
   box-shadow: 0 18px 40px rgba(0,0,0,.10);
   display: none;
   z-index: 10;
+}
+
+/* Bridge the gap so hovering through it doesn't dismiss the menu */
+.nav-dd-menu::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 10px;
 }
 
 .nav-dd-menu a {
