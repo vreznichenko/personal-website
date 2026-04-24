@@ -1,7 +1,98 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="Writing">
+
+<BaseLayout title="Writing — Volod Reznichenko">
   <h1>Writing</h1>
-  <p>Hello world writing.</p>
+
+  <div class="articles">
+    <a
+      class="article-card"
+      href="https://volodrez.substack.com/p/reimagining-hearst-the-founders-fire"
+      target="_blank"
+      rel="noopener"
+    >
+      <div class="article-meta">
+        <time>Aug 9, 2025</time>
+        <span>6 min read</span>
+      </div>
+      <h2>Reimagining Hearst: The Founder's Fire in a Digital World</h2>
+    </a>
+
+    <a
+      class="article-card"
+      href="https://volodrez.substack.com/p/lessons-in-experimentation"
+      target="_blank"
+      rel="noopener"
+    >
+      <div class="article-meta">
+        <time>Nov 30, 2024</time>
+        <span>3 min read</span>
+      </div>
+      <h2>Lessons in Experimentation: Building a Culture of Testing at Scale</h2>
+    </a>
+
+    <a
+      class="article-card"
+      href="https://volodrez.substack.com/p/first-30-days-as-a-product-manager"
+      target="_blank"
+      rel="noopener"
+    >
+      <div class="article-meta">
+        <time>Jul 15, 2023</time>
+        <span>2 min read</span>
+      </div>
+      <h2>First 30 days as a product manager in media industry</h2>
+    </a>
+  </div>
+
+  <p class="substack-link">
+    <a href="https://volodrez.substack.com" target="_blank" rel="noopener">
+      More on Substack →
+    </a>
+  </p>
 </BaseLayout>
+
+<style>
+  .articles {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 2rem 0;
+  }
+
+  .article-card {
+    display: block;
+    padding: 20px 24px;
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.15s, background 0.15s;
+  }
+
+  .article-card:hover {
+    border-color: var(--accent);
+    background: var(--accent-surface);
+  }
+
+  .article-meta {
+    display: flex;
+    gap: 12px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+
+  .article-card h2 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  .substack-link {
+    margin-top: 0.5rem;
+  }
+</style>
