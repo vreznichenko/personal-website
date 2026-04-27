@@ -9,6 +9,7 @@ const {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta property="og:title" content={title} />
@@ -429,15 +430,6 @@ nav a.active {
   z-index: 10;
 }
 
-/* Bridge the gap so hovering through it doesn't dismiss the menu */
-.nav-dd-menu::before {
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: 0;
-  right: 0;
-  height: 10px;
-}
 
 .nav-dd-menu a {
   display: block;
